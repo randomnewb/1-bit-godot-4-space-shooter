@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://pdvm2vvmg2o2"]
+
+[ext_resource type="PackedScene" uid="uid://b5wnmwv2r3usw" path="res://ship.tscn" id="1_jnx2m"]
+[ext_resource type="PackedScene" uid="uid://dynye78m8dc1y" path="res://enemy.tscn" id="2_lhtiv"]
+
+[node name="World" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0, 0, 0, 1)
+
+[node name="Ship" parent="." instance=ExtResource("1_jnx2m")]
+position = Vector2(22, 81)
+
+[node name="Enemy" parent="." instance=ExtResource("2_lhtiv")]
+position = Vector2(298, 40)
+
+[node name="Enemy2" parent="." instance=ExtResource("2_lhtiv")]
+position = Vector2(258, 103)
+
+[node name="Enemy3" parent="." instance=ExtResource("2_lhtiv")]
+position = Vector2(193, 61)
+
+[node name="Enemy4" parent="." instance=ExtResource("2_lhtiv")]
+position = Vector2(371, 158)
