@@ -12,5 +12,9 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		var laser = LASER_SCENE.instantiate();
 		var world = get_tree().current_scene;
-		world.add_child(laser)
-		laser.position = position
+		world.add_child(laser);
+		laser.position = position;
+
+func _on_area_entered(area):
+	queue_free();
+	area.queue_free();
