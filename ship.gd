@@ -4,12 +4,15 @@ const LASER_SCENE = preload("res://laser.tscn");
 
 @export var speed = 100;
 
+var height = ProjectSettings.get_setting("display/window/size/viewport_height");
+
 signal ship_destroyed
 
 func _process(delta):
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("ui_up") && position.y > 0:
+		#print("Height", height, "position y", position.y);
 		position.y -= speed * delta;
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("ui_down") && position.y < height:
 		position.y += speed * delta;
 	if Input.is_action_just_pressed("ui_accept"):
 		var laser = LASER_SCENE.instantiate();
