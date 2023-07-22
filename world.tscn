@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://pdvm2vvmg2o2"]
+[gd_scene load_steps=6 format=3 uid="uid://pdvm2vvmg2o2"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_jlla5"]
 [ext_resource type="PackedScene" uid="uid://b5wnmwv2r3usw" path="res://ship.tscn" id="1_jnx2m"]
 [ext_resource type="PackedScene" uid="uid://kd68xhdx60ic" path="res://enemy_spawner.tscn" id="2_e25ru"]
 [ext_resource type="LabelSettings" uid="uid://b0t4jpl8edady" path="res://label_settings.tres" id="2_jd8ff"]
 [ext_resource type="PackedScene" uid="uid://bqxhvs2rohk5v" path="res://star_particles.tscn" id="5_j5i2h"]
-[ext_resource type="PackedScene" uid="uid://douuf0gl4tugh" path="res://music_player.tscn" id="6_fa41h"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_jlla5")
@@ -34,4 +33,4 @@ position = Vector2(320, 0)
 
 [node name="StarParticles" parent="." instance=ExtResource("5_j5i2h")]
 
-[node name="MusicPlayer" parent="." instance=ExtResource("6_fa41h")]
+[connection signal="ship_destroyed" from="Ship" to="." method="_on_ship_ship_destroyed"]

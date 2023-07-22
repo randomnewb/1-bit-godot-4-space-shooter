@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://coqadmkoomlu6"]
+[gd_scene load_steps=4 format=3 uid="uid://coqadmkoomlu6"]
 
 [ext_resource type="Script" path="res://start_menu.gd" id="1_hkfaf"]
 [ext_resource type="LabelSettings" uid="uid://b0t4jpl8edady" path="res://label_settings.tres" id="1_rujws"]
 [ext_resource type="PackedScene" uid="uid://bqxhvs2rohk5v" path="res://star_particles.tscn" id="3_7nuqn"]
-[ext_resource type="PackedScene" uid="uid://douuf0gl4tugh" path="res://music_player.tscn" id="4_u1n4g"]
 
 [node name="StartMenu" type="ColorRect"]
 anchors_preset = 15
@@ -31,5 +30,3 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="StarParticles" parent="." instance=ExtResource("3_7nuqn")]
-
-[node name="MusicPlayer" parent="." instance=ExtResource("4_u1n4g")]
